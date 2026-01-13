@@ -48,6 +48,10 @@ class Config:
         self.use_cuda_kernels = True
         self.device = 'cuda' if os.getenv('CUDA_VISIBLE_DEVICES') else 'cpu'
 
+        # Other
+        self.resume = None
+        self.evaluate = False
+
     def update_from_args(self, args):
         """Update config from command line arguments"""
         for key, value in vars(args).items():
