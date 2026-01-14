@@ -33,7 +33,7 @@ ENV/
 *~
 
 # Data and models
-data/
+data/*
 !data/datasets.py
 checkpoints/
 logs/
