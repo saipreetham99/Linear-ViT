@@ -197,7 +197,7 @@ By sharing K/V computations and using linear attention, HydraAttention maintains
 
 ### Custom CUDA Kernels
 
-Our CUDA kernels optimize:
+CUDA kernels optimize:
 - **Tiled Matrix Multiplication**: Uses shared memory for K^T V computation
 - **Memory Coalescing**: Optimizes global memory access patterns
 - **Warp-Level Primitives**: Parallel reductions for normalization
@@ -352,28 +352,13 @@ python train.py --attention_type hydra --hydra_branches 6 --epochs 100
 python train.py --attention_type hydra --hydra_branches 8 --epochs 100
 ```
 
-## Citation
 
-If you use this code in your research, please cite:
-
-```bibtex
-@misc{linear-vit-2024,
-  title={Sub-Quadratic Vision Transformers with RippleAttention and HydraAttention},
-  author={Your Name},
-  year={2024},
-  howpublished={\url{https://github.com/yourusername/Linear-ViT}},
-}
-```
 
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-## Acknowledgments
 
-- Vision Transformer implementation inspired by [timm](https://github.com/huggingface/pytorch-image-models)
-- Linear attention concepts from Katharopoulos et al., "Transformers are RNNs: Fast Autoregressive Transformers with Linear Attention"
-- CUDA kernel optimizations based on CUTLASS library patterns
 
 ## Troubleshooting
 
@@ -398,9 +383,6 @@ Training on CPU is not recommended. Use GPU or reduce model size:
 python train.py --dim 192 --depth 6 --batch_size 32
 ```
 
-## Contact
-
-For questions or issues, please open an issue on GitHub or contact [your-email@example.com](mailto:your-email@example.com).
 
 ---
 
